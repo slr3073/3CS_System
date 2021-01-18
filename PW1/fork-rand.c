@@ -27,6 +27,7 @@ int main() {
         pid_child = wait(&status_child);
 
         if (pid_child == -1) perror("wait() error");
+        fprintf(stderr, "status fils : %d\n", WEXITSTATUS(status_child));
     }
     return 0;
 }
